@@ -1,0 +1,9 @@
+.notification {
+  top: calc(75px + 50px);
+  background-color: var(--secondColor);
+  position: inherit;
+  z-index: 999;
+  max-width: 100%;
+  padding: 20px;
+  line-height: 30px;
+}

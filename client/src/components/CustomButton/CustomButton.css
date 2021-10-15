@@ -1,0 +1,18 @@
+.custom-btn {
+  background-color: var(--mainColor);
+  outline: none;
+  border: 0;
+}
+.custom-btn:hover {
+  cursor: pointer;
+}
+.custom-btn:active {
+  background-color: rgb(7, 22, 68);
+}
+.small-btn {
+  margin: auto 0 0 0;
+  height: 30px;
+  padding: 0 20px !important;
+  border-radius: 20px;
+  color: var(--mainColor);
+}

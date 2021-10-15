@@ -1,0 +1,14 @@
+.calendar-container{
+  padding: 100px;
+  display: flex;
+}
+
+.fixed{
+  padding-right: 20px;
+  width: 60%;
+}
+
+.flex-item{
+  padding-left: 20px;
+  flex-grow: 1;
+}

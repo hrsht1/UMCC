@@ -1,0 +1,121 @@
+.calendarIcon {
+  color: var(--mainColor);
+  font-size: 40px;
+  display: inline;
+}
+
+.Picture {
+  width: 100%;
+}
+
+.btn {
+  font-size: 15px;
+  background-color: var(--mainColor);
+  color: var(--secondColor);
+  /* padding: 10px 50px; */
+  border-radius: 30px;
+  display: inline;
+  border: 0;
+  margin-left: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: var(--activeColor);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--activeColor);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 30px auto 20px auto;
+}
+
+.descriptionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+.descriptionContent {
+  word-break: break-word;
+  color: var(--mainColor);
+}
+
+.shortcut {
+  position: relative;
+  top: 20px;
+  color: var(--secondColor);
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.shortcut > p::before,
+.shortcut > p::after {
+  background-color: var(--mainColor);
+  content: "";
+  display: inline-block;
+  height: 5px;
+  border-radius: 30px;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.shortcut > p::before {
+  margin-right: 30px;
+}
+.shortcut > p::after {
+  margin-left: 30px;
+}
+
+.shortcut_pic {
+  display: flex;
+  flex-direction: column;
+}
+.shortcut_pic > img {
+  margin: 0 auto;
+  width: 64px;
+  height: 60px;
+}
+
+.shortcutContent {
+  position: relative;
+  top: 20px;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 80px;
+}
+
+.bottom {
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  position: absolute;
+  line-height: 30px;
+  text-align: center;
+  background-color: var(--mainColor);
+  color: var(--secondColor);
+  margin-bottom: 0;
+}

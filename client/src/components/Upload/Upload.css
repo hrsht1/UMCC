@@ -1,0 +1,18 @@
+.uploadContainer {
+  border: 5px dashed #ccc;
+  width: 100%;
+  justify-content: center;
+}
+
+.uploadContainer:hover {
+  border: 5px dashed rgb(59, 183, 255);
+}
+
+.uploadContainer > img {
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="file"] {
+  display: inline;
+}

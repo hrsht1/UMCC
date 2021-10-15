@@ -1,0 +1,3 @@
+[submodule "rbc-starter"]
+	path = rbc-starter
+	url = https://github.com/arecvlohe/rbc-starter.git

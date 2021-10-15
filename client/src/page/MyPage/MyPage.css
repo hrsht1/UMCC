@@ -1,0 +1,43 @@
+/* .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile > button:nth-child(1) {
+    margin-right: 30px;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 15px 0;
+  }
+  
+  .action-group {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .eventContainer {
+    width: 70%;
+    display: flex;
+    margin: 20px auto 0 auto;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .eventContainer > div {
+    width: 100%;
+    margin: 0 auto 0 0;
+  }
+
+  .alert {
+    position: fixed;
+    bottom: 70%;
+    right: 20px;
+    z-index: 9999;
+  } */
