@@ -15,12 +15,12 @@ import Paper from "@material-ui/core/Paper";
 import Chip from "@material-ui/core/Chip";
 import TagFacesIcon from "@material-ui/icons/TagFaces";
 import Grow from "@material-ui/core/Grow";
-import "./addEvent.css";
+import "./CreateEvent.css";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import Footer from "../../components/Footer/Footer";
 import store from "../../store";
 
-class AddEvent extends Component {
+class CreateEvent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -113,9 +113,16 @@ class AddEvent extends Component {
     };
   }
 
-  componentDidMount(){
-    axios.get(process.env.REACT_APP_MY_URL + "api/users/" + store.getState().auth.user.id)
-    .then((res) => {this.setState({ user_isAuthorized: res.isAuthorized })});
+  componentDidMount() {
+    axios
+      .get(
+        process.env.REACT_APP_MY_URL +
+          "api/users/" +
+          store.getState().auth.user.id
+      )
+      .then((res) => {
+        this.setState({ user_isAuthorized: res.isAuthorized });
+      });
   }
 
   getCategoryArray(categoryObjects) {
@@ -204,13 +211,12 @@ class AddEvent extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  getActiveStatus(isAuthorized){
-    if(isAuthorized){
-      this.setState({ event_active: true});
+  getActiveStatus(isAuthorized) {
+    if (isAuthorized) {
+      this.setState({ event_active: true });
       return true;
-    }
-    else{
-      this.setState({ event_active: false});
+    } else {
+      this.setState({ event_active: false });
       return false;
     }
   }
@@ -231,7 +237,7 @@ class AddEvent extends Component {
       event_end_time: this.state.event_end_time,
       event_category: this.getCategoryArray(this.state.event_category),
       event_active: this.getActiveStatus(this.state.user_isAuthorized),
-      event_link: this.state.event_link
+      event_link: this.state.event_link,
     };
 
     axios
@@ -247,7 +253,7 @@ class AddEvent extends Component {
           event_start_time: Date.now(),
           event_end_time: Date.now(),
           event_category: [],
-          event_link: ""
+          event_link: "",
         });
         alert("Event '" + data.event_title + "' created!");
         this.props.history.push("/create");
@@ -262,7 +268,10 @@ class AddEvent extends Component {
       <>
         <Header />
         <h2 className="center">Create New Event</h2>
-        <p className="center">An administrator will review your event. Once approved, it will appear on the calendar.</p>
+        <p className="center">
+          An administrator will review your event. Once approved, it will appear
+          on the calendar.
+        </p>
         <br />
         <div style={{ border: "5px" }}>
           <form onSubmit={this.onSubmit} className="col s12 container">
@@ -455,4 +464,4 @@ class AddEvent extends Component {
   }
 }
 
-export default AddEvent;
+export default CreateEvent;

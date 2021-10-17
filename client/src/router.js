@@ -6,7 +6,7 @@ import React from "react";
 import ProfilePage from "./page/ProfilePage/ProfilePage";
 import EditMyProfile from "./page/ProfilePage/EditProfile";
 import MyPage from "./page/MyPage/MyPage";
-import AddEvent from "./page/addEvent/addEvent.js";
+import CreateEvent from "./page/CreateEvent/CreateEvent.js";
 import EventDetailsPage from "./page/EventDetails/EventDetailsPage";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
@@ -76,7 +76,7 @@ export class CustomRoute extends React.Component {
             <Route path="/profile" component={ProfilePage} />
             <Route path="/creator-profile" component={CreatorProfile} />
             <Switch>
-              <PrivateRoute exact path="/create" component={AddEvent} />
+              <PrivateRoute exact path="/create" component={CreateEvent} />
               <PrivateRoute exact path="/mypage" component={MyPage} />
               <PrivateRoute path="/editprofile" component={EditMyProfile} />
               <PrivateRoute exact path="/admin-tools" component={AdminTools} />
